@@ -11,6 +11,6 @@ console.log(profileManager.getAllUsers(), 'all users added'); // Выводит 
 profileManager.updateUser(1, { name: "Alicia" }); // Обновляет имя Alice на Alicia
 profileManager.removeUser(2); // Удаляет Bob
 
-console.log(profileManager.getAllUsers(), 'all users after remove');
+console.log(profileManager.getAllUsers(), 'all users after remove and update');
 
-console.log(profileManager.findUserByName("Ali"), 'findByName'); // Находит Alicia
+console.log(profileManager.findUserByName("Ali"), 'findByName Ali'); // Находит Alicia
