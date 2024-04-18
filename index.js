@@ -2,7 +2,7 @@
 //* rangeLen + minNumber);
 const getId = (user) => user.id;
 const getName = (user) => user.name;
-const getUnuquieId = (users) => (users.at(-1) ? getUserId(users.at(-1)) + 1 : 1);
+const getUnuquieId = (users) => (users.at(-1) ? getId(users.at(-1)) + 1 : 1);
 // const savedId = users.map((user) => getId(user));
 // let id = randomNum(10000);
 // for (let i = 0; savedId.length > i; i += 1) {
