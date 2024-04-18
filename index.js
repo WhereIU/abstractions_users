@@ -1,9 +1,9 @@
 // const randomNum = (rangeLen, minNumber = 1) => Math.floor(Math.random()
 //* rangeLen + minNumber);
-const getUserId = (user) => user.id;
-const getUserName = (user) => user.name;
+const getId = (user) => user.id;
+const getName = (user) => user.name;
 const getUnuquieId = (users) => (users.at(-1) ? getUserId(users.at(-1)) + 1 : 1);
-// const savedId = users.map((user) => getUserId(user));
+// const savedId = users.map((user) => getId(user));
 // let id = randomNum(10000);
 // for (let i = 0; savedId.length > i; i += 1) {
 //  if (savedId[i] === id) {
@@ -25,13 +25,13 @@ class UserProfileManager {
   };
 
   this.removeUser = function (id) {
-    this.users = this.users.filter((user) => getUserId(user) !== id);
+    this.users = this.users.filter((user) => getId(user) !== id);
   };
 
   this.updateUser = function (id, newInfo) {
     const { users } = this;
     for (let i = 0; users.length > i; i += 1) {
-      if (getUserId(users[i]) === id) {
+      if (getId(users[i]) === id) {
         users[i] = { ...users[i], ...newInfo };
         break;
       }
@@ -39,7 +39,7 @@ class UserProfileManager {
   };
 
   this.findUserByName = function (name) {
-    return this.users.filter((user) => getUserName(user).includes(name));
+    return this.users.filter((user) => getName(user).includes(name));
   };
 
   this.getAllUsers = function () {
